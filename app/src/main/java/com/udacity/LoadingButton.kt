@@ -153,6 +153,8 @@ class LoadingButton @JvmOverloads constructor(
         if (Constance.isDownloadComplete && progress == 360) {
             Log.e("onDrawAfter: progress: ",progress.toString())
             buttonState = ButtonState.Completed
+            valueAnimator.repeatCount = ValueAnimator.INFINITE
+            valueAnimator.repeatMode = ValueAnimator.RESTART
         }
     }
 
